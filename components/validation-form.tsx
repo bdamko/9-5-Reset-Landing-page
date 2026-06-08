@@ -28,11 +28,6 @@ const questions = [
     label: "How many hours do you usually sit per workday?",
     options: ["4–6", "6–8", "8–10", "10+"],
   },
-  {
-    id: "pay",
-    label: "Would you pay $29.99/year for a calendar-based reset plan?",
-    options: ["Yes", "Maybe", "No"],
-  },
 ]
 
 export function ValidationForm() {
