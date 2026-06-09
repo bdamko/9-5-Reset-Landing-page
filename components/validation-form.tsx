@@ -25,7 +25,7 @@ const questions = [
     id: "problem",
     label: "What is your biggest desk-work problem?",
     hint: "Select all that apply",
-    options: ["Neck pain", "Back pain", "Low energy", "Poor posture", "No time to exercise", "Lunch choices"],
+    options: ["Neck pain", "Back pain", "Low energy", "Poor posture", "No time to exercise"],
     multi: true,
   },
   {
