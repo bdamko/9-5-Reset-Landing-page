@@ -40,7 +40,7 @@ export function SiteFooter() {
           <span aria-hidden="true">🦐</span>
           <span className="font-semibold text-foreground">9–5 Reset</span>
         </div>
-        <p>Health that fits between meetings. Unshrimp your posture, one tiny reset at a time.</p>
+        <p>Desk recovery that fits in the gaps. Built for the 9-to-5 reality.</p>
       </div>
     </footer>
   )

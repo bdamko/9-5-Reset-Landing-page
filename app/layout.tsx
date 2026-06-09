@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: '9–5 Reset — Health that fits between meetings',
   description:
-    'Stop sitting like a shrimp. 9–5 Reset connects to your work calendar and finds small windows for posture resets, micro-workouts, and after-work recovery.',
+    'Desk recovery that fits in the breaks. Built for the 9-to-5 reality.',
   generator: 'v0.app',
   icons: {
     icon: [

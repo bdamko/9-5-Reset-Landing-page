@@ -75,7 +75,7 @@ export function ValidationForm() {
             Get your free workday reset plan
           </h2>
           <p className="mt-3 text-lg text-muted-foreground">
-            Answer a few questions and join the early access list.
+            Answer a few questions and get your personalized reset plan.
           </p>
         </div>
 
@@ -140,7 +140,7 @@ export function ValidationForm() {
             )}
 
             <Button type="submit" size="lg" className="rounded-full text-base" disabled={loading}>
-              {loading ? "Joining..." : "Join early access"}
+              {loading ? "Joining..." : "Get my reset plan"}
             </Button>
           </form>
         )}
