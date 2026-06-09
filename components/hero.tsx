@@ -10,11 +10,10 @@ export function Hero() {
             Let 9-5 Reset take care of your health
           </span>
           <h1 className="text-balance text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl">
-            Stop sitting like a shrimp.
+            Your neck and back deserve better than another workday.
           </h1>
           <p className="text-pretty text-lg leading-relaxed text-muted-foreground">
-            9–5 Reset connects to your work calendar and finds small windows for posture resets, micro-workouts, smart
-            lunch tips, and after-work recovery.
+            9–5 Body Reset gives you a desk recovery program for neck and back pain without changing your schedule. 
           </p>
           <div className="flex flex-col items-start gap-3">
             <Button render={<a href="#early-access" />} nativeButton={false} size="lg" className="rounded-full px-7 text-base">
@@ -47,10 +46,10 @@ export function Hero() {
 
 function PhoneMockup() {
   const items = [
-    { time: "10:40", label: "3-min neck & shoulder reset", tone: "bg-secondary" },
-    { time: "12:30", label: "Lunch tip: protein + fiber first", tone: "bg-accent" },
-    { time: "15:15", label: "8-min energy walk", tone: "bg-secondary" },
-    { time: "18:10", label: "12-min after-work back reset", tone: "bg-accent" },
+    { time: "10:40", label: "3-min neck & shoulder stretch", tone: "bg-secondary" },
+    { time: "12:30", label: "5-min posture reset", tone: "bg-accent" },
+    { time: "15:15", label: "8-min light walk", tone: "bg-secondary" },
+    { time: "18:10", label: "12-min after-work recovery", tone: "bg-accent" },
   ]
   return (
     <div className="w-[260px] rounded-[2.5rem] border-8 border-foreground/90 bg-card p-4 shadow-2xl sm:w-[280px]">
