@@ -6,21 +6,22 @@ const tiers = [
     name: "Free",
     price: "$0",
     period: "forever",
-    features: ["Calendar sync", "3 resets per week", "Basic posture tips"],
+    features: ["Manual schedule", "3 sessions per week", "Week 1 of the neck & back program"],
     cta: "Start free",
     highlighted: false,
   },
   {
     name: "Pro",
-    price: "$7.99",
+    price: "$4.99",
     period: "/month",
     badge: "Early price",
     features: [
-      "Unlimited resets",
-      "Posture breaks",
+      "Weekly recovery program",
+      "Unlimited daily sessions",
+      "Calendar sync with Apple, Google & Outlook",
       "Low/Normal/High Energy modes",
       "After-work recovery",
-      "Weekly report",
+      "Weekly progress report",
     ],
     cta: "Join early access",
     highlighted: true,
@@ -34,7 +35,7 @@ export function Pricing() {
         <h2 className="text-balance text-center text-3xl font-bold tracking-tight text-foreground md:text-4xl">
           Simple pricing
         </h2>
-        <p className="mt-3 text-center text-lg text-muted-foreground">Start free. Go Pro when you&apos;re ready.</p>
+        <p className="mt-3 text-center text-lg text-muted-foreground">Start with a 1-week neck & back reset. Then keep going — maintenance programs, new focus areas, and calendar sync keep working every day.</p>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {tiers.map((tier) => (
             <div

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { CheckCircle2 } from "lucide-react"
+import { supabase } from "@/lib/supabase"
 
 const questions = [
   {
@@ -34,9 +35,35 @@ export function ValidationForm() {
   const [answers, setAnswers] = useState<Record<string, string>>({})
   const [email, setEmail] = useState("")
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [errorMsg, setErrorMsg] = useState("")
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
+    setLoading(true)
+    setErrorMsg("")
+
+    const { error } = await supabase.from("waitlist").insert([
+      {
+        email,
+        workday: answers.workday ?? null,
+        calendar: answers.calendar ?? null,
+        problem: answers.problem ?? null,
+        hours: answers.hours ?? null,
+      },
+    ])
+
+    setLoading(false)
+
+    if (error) {
+      if (error.code === "23505") {
+        setErrorMsg("You're already on the list! We'll be in touch soon.")
+      } else {
+        setErrorMsg("Something went wrong. Please try again.")
+      }
+      return
+    }
+
     setSubmitted(true)
   }
 
@@ -106,8 +133,14 @@ export function ValidationForm() {
               />
             </div>
 
-            <Button type="submit" size="lg" className="rounded-full text-base">
-              Join early access
+            {errorMsg && (
+              <p className="rounded-xl bg-destructive/10 px-4 py-3 text-sm text-destructive">
+                {errorMsg}
+              </p>
+            )}
+
+            <Button type="submit" size="lg" className="rounded-full text-base" disabled={loading}>
+              {loading ? "Joining..." : "Join early access"}
             </Button>
           </form>
         )}
