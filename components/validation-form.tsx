@@ -13,26 +13,31 @@ const questions = [
     id: "workday",
     label: "What type of workday do you have?",
     options: ["Office", "Remote", "Hybrid", "Freelance", "Student with desk work"],
+    multi: false,
   },
   {
     id: "calendar",
     label: "What calendar do you use?",
     options: ["Google Calendar", "Outlook", "Apple Calendar", "Not sure"],
+    multi: false,
   },
   {
     id: "problem",
     label: "What is your biggest desk-work problem?",
+    hint: "Select all that apply",
     options: ["Neck pain", "Back pain", "Low energy", "Poor posture", "No time to exercise", "Lunch choices"],
+    multi: true,
   },
   {
     id: "hours",
     label: "How many hours do you usually sit per workday?",
     options: ["4–6", "6–8", "8–10", "10+"],
+    multi: false,
   },
 ]
 
 export function ValidationForm() {
-  const [answers, setAnswers] = useState<Record<string, string>>({})
+  const [answers, setAnswers] = useState<Record<string, string | string[]>>({})
   const [email, setEmail] = useState("")
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -48,7 +53,7 @@ export function ValidationForm() {
         email,
         workday: answers.workday ?? null,
         calendar: answers.calendar ?? null,
-        problem: answers.problem ?? null,
+        problem: Array.isArray(answers.problem) ? answers.problem.join(", ") : (answers.problem ?? null),
         hours: answers.hours ?? null,
       },
     ])
@@ -94,15 +99,34 @@ export function ValidationForm() {
           >
             {questions.map((q) => (
               <fieldset key={q.id} className="flex flex-col gap-3">
-                <legend className="text-sm font-semibold text-foreground">{q.label}</legend>
+                <div className="flex items-baseline gap-2">
+                  <legend className="text-sm font-semibold text-foreground">{q.label}</legend>
+                  {q.hint && (
+                    <span className="text-xs text-muted-foreground">{q.hint}</span>
+                  )}
+                </div>
                 <div className="flex flex-wrap gap-2">
                   {q.options.map((option) => {
-                    const selected = answers[q.id] === option
+                    const selected = q.multi
+                      ? Array.isArray(answers[q.id]) && (answers[q.id] as string[]).includes(option)
+                      : answers[q.id] === option
                     return (
                       <button
                         type="button"
                         key={option}
-                        onClick={() => setAnswers((prev) => ({ ...prev, [q.id]: option }))}
+                        onClick={() => {
+                          if (q.multi) {
+                            setAnswers((prev) => {
+                              const current = Array.isArray(prev[q.id]) ? (prev[q.id] as string[]) : []
+                              const next = current.includes(option)
+                                ? current.filter((v) => v !== option)
+                                : [...current, option]
+                              return { ...prev, [q.id]: next }
+                            })
+                          } else {
+                            setAnswers((prev) => ({ ...prev, [q.id]: option }))
+                          }
+                        }}
                         className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
                           selected
                             ? "border-primary bg-primary text-primary-foreground"
