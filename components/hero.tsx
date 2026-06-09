@@ -10,7 +10,7 @@ export function Hero() {
             Let 9-5 Reset take care of your health
           </span>
           <h1 className="text-balance text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl">
-            Your neck and back deserve better than another workday.
+            Health that fits between meetings.
           </h1>
           <p className="text-pretty text-lg leading-relaxed text-muted-foreground">
             9–5 Body Reset gives you a desk recovery program for neck and back pain without changing your schedule. 

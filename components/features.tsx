@@ -2,19 +2,19 @@ import { CalendarCheck, Timer, Dumbbell, Battery, Moon } from "lucide-react"
 
 const features = [
   {
-    icon: CalendarCheck,
-    title: "Connects to your calendar",
-    body: "Links with Apple/Google/Outlook Calendar, automatically spots the open windows between meetings. We see time blocks, nothing else.",
+    icon: Timer,
+    title: "Neck & back recovery program",
+    body: "A structured recovery plan that progresses week by week, helping you build strength and mobility instead of repeating random exercises.",
   },
   {
-    icon: Timer,
-    title: "Stretch reminders",
+    icon: CalendarCheck,
+    title: "Sessions timed to your day",
     body: "A gentle break timer nudges you to sit up and move. Before it checks your calendar to never interrupt you mid-meeting.",
   },
   {
     icon: Dumbbell,
-    title: "Quick guided sessions",
-    body: "15 illustrated desk, standing, and breathing exercises. Each break mixes 2–4 of them based on your break and energy. ",
+    title: "Built for your specific pain",
+    body: "Neck-focused, back-focused, or both. Your program adjusts accordingly. ",
   },
   {
     icon: Battery,
@@ -23,8 +23,8 @@ const features = [
   },
   {
     icon: Moon,
-    title: "Evening recovery",
-    body: "After 5pm the app shifts gears and offers an 8-minute decompression sequence to help you rest after work.",
+    title: "Evening wind-down",
+    body: "After 5pm the app shifts to an 8-minute decompression sequence to help you relax after work.",
   },
 ]
 

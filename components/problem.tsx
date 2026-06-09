@@ -3,13 +3,13 @@ import { Armchair, Clock, BellOff } from "lucide-react"
 const pains = [
   {
     icon: Armchair,
-    title: "Chronic stiffness",
-    body: "Eight hours hunched over a screen leaves your body feeling like a question mark.",
+    title: "Chronic neck and back pain",
+    body: "Sitting for 8 hours compresses your spine and locks up your neck. It can't be fixed with a few gym sessions each week.",
   },
   {
     icon: Clock,
-    title: "No time or energy for long workouts",
-    body: "Between back-to-back meetings, a full gym session is never going to happen.",
+    title: "No program built for your schedule",
+    body: "You don't have 45 minutes. The gap between your 2pm and 3pm is enough.",
   },
   {
     icon: BellOff,

@@ -2,22 +2,22 @@ import { CalendarPlus, Search, Sparkles } from "lucide-react"
 
 const steps = [
   {
-    icon: CalendarPlus,
+    icon: Search,
     step: "1",
-    title: "Connect your calendar",
-    body: "Link Apple/Google/Outlook Calendar to the app. We only look for free time.",
+    title: "Share your problem area",
+    body: "Neck pain, back pain, or both. Your 4-week recovery program is built around your specific issue.",
   },
   {
-    icon: Search,
+    icon: CalendarPlus,
     step: "2",
-    title: "We find your free windows",
-    body: "9–5 Reset spots the 5–15 minute gaps between your meetings, automatically.",
+    title: "Set your schedule (or sync your calendar)",
+    body: "Enter your work hours manually — free. Connect your calendar on Pro for automatic gap detection.",
   },
   {
     icon: Sparkles,
     step: "3",
-    title: "Get tiny resets",
-    body: "Bite-sized moves for movement, posture, lunch, and after-work recovery.",
+    title: "Get your daily resets",
+    body: "Short targeted sessions for 3 to 12 minutes. Built for desk workers, not athletes.",
   },
 ]
 
