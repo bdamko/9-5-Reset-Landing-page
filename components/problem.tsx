@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Armchair, Clock, BellOff } from "lucide-react"
 
 const pains = [
@@ -22,9 +23,18 @@ export function Problem() {
   return (
     <section className="bg-muted/40 py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-5">
-        <h2 className="text-balance text-center text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-          Your workday is hurting your body.
-        </h2>
+        <div className="flex flex-col items-center justify-center gap-4 md:flex-row md:gap-8">
+          <Image
+            src="/sad.png"
+            alt="Tired giraffe mascot slumped over a desk"
+            width={160}
+            height={160}
+            className="h-auto w-40 shrink-0 sm:w-52 md:w-60"
+          />
+          <h2 className="text-balance text-center text-3xl font-bold tracking-tight text-foreground md:text-left md:text-4xl">
+            Your workday is hurting your body.
+          </h2>
+        </div>
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           {pains.map((pain) => (
             <div key={pain.title} className="rounded-3xl border border-border bg-card p-6 shadow-sm">

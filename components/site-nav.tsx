@@ -5,7 +5,7 @@ export function SiteNav() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
         <a href="#top" className="flex items-center gap-2">
-          <img src="/logo.png" alt="9–5 Reset logo" className="size-8" />
+          <span className="text-2xl" aria-hidden="true">🦒</span>
           <span className="text-lg font-semibold tracking-tight text-foreground">9–5 Reset</span>
         </a>
         <nav className="hidden items-center gap-7 text-sm font-medium text-muted-foreground md:flex">

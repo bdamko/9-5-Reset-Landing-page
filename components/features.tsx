@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { CalendarCheck, Timer, Dumbbell, Battery, Moon } from "lucide-react"
 
 const features = [
@@ -57,6 +58,15 @@ export function Features() {
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{feature.body}</p>
             </div>
           ))}
+          <div className="hidden items-center justify-center lg:flex">
+            <Image
+              src="/happyg.png"
+              alt="Happy giraffe mascot celebrating at a desk"
+              width={300}
+              height={300}
+              className="h-auto w-full max-w-[260px]"
+            />
+          </div>
         </div>
       </div>
     </section>

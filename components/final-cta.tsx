@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
 export function FinalCta() {
@@ -17,15 +16,6 @@ export function FinalCta() {
               Join early access
             </Button>
           </div>
-          <div className="absolute -bottom-4 right-2 w-28 opacity-90 md:right-8 md:w-36">
-            <Image
-              src="/shrimp-happy.png"
-              alt="Happy shrimp mascot stretching with good posture"
-              width={180}
-              height={180}
-              className="h-auto w-full"
-            />
-          </div>
         </div>
       </div>
     </section>
@@ -37,7 +27,7 @@ export function SiteFooter() {
     <footer className="border-t border-border/60 py-8">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-2 px-5 text-center text-sm text-muted-foreground">
         <div className="flex items-center gap-2">
-          <span aria-hidden="true">🦐</span>
+          <span aria-hidden="true">🦒</span>
           <span className="font-semibold text-foreground">9–5 Reset</span>
         </div>
         <p>Desk recovery that fits in the gaps. Built for the 9-to-5 reality.</p>

@@ -28,7 +28,7 @@ export function Hero() {
         <div className="relative flex justify-center">
           <div className="absolute -inset-6 -z-10 rounded-[3rem] bg-secondary/50 blur-2xl" aria-hidden="true" />
           <PhoneMockup />
-          <div className="absolute -bottom-6 -left-2 w-32 sm:w-40 md:-left-6">
+          <div className="absolute -bottom-[170px] -left-[110px] w-[260px] sm:w-[300px] md:-left-[140px]">
             <Image
               src="/norm.png"
               alt="Friendly giraffe mascot hunched over a laptop"

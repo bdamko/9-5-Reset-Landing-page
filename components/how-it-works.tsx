@@ -28,13 +28,13 @@ export function HowItWorks() {
         <h2 className="text-balance text-center text-3xl font-bold tracking-tight text-foreground md:text-4xl">
           How it works
         </h2>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-8 sm:grid-cols-3">
           {steps.map((step) => (
-            <div key={step.step} className="relative rounded-3xl border border-border bg-card p-7 text-center shadow-sm">
-              <span className="absolute -top-4 left-1/2 flex size-9 -translate-x-1/2 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
+            <div key={step.step} className="relative rounded-3xl border border-border bg-card p-6 pt-8 text-center shadow-sm">
+              <span className="absolute -top-4 left-1/2 flex size-8 -translate-x-1/2 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
                 {step.step}
               </span>
-              <div className="mx-auto mt-2 flex size-14 items-center justify-center rounded-2xl bg-secondary text-secondary-foreground">
+              <div className="mx-auto flex size-12 items-center justify-center rounded-2xl bg-secondary text-secondary-foreground">
                 <step.icon className="size-6" aria-hidden="true" />
               </div>
               <h3 className="mt-4 text-lg font-semibold text-foreground">{step.title}</h3>
