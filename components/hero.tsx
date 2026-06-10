@@ -30,8 +30,8 @@ export function Hero() {
           <PhoneMockup />
           <div className="absolute -bottom-6 -left-2 w-32 sm:w-40 md:-left-6">
             <Image
-              src="/shrimp-laptop.png"
-              alt="Friendly shrimp mascot hunched over a laptop with curved posture"
+              src="/norm.png"
+              alt="Friendly giraffe mascot hunched over a laptop"
               width={200}
               height={200}
               className="h-auto w-full drop-shadow-lg"

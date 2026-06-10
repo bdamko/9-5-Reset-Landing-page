@@ -12,7 +12,7 @@ export function DemoPlan() {
         <div className="rounded-[2rem] border border-border bg-card p-7 shadow-md md:p-9">
           <div className="flex items-center gap-2">
             <span className="flex size-9 items-center justify-center rounded-full bg-primary text-base">
-              <span aria-hidden="true">🦐</span>
+              <span aria-hidden="true">🦒</span>
             </span>
             <h2 className="text-xl font-bold text-foreground md:text-2xl">Today&apos;s 9–5 Reset</h2>
           </div>
