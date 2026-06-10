@@ -33,6 +33,15 @@ export function Features() {
   return (
     <section id="features" className="py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-5">
+        <div className="flex justify-center sm:hidden">
+          <Image
+            src="/happyg.png"
+            alt="Happy giraffe mascot celebrating at a desk"
+            width={150}
+            height={150}
+            className="h-auto w-52"
+          />
+        </div>
         <div className="mx-auto max-w-2xl text-center">
           <span className="inline-flex items-center rounded-full bg-secondary px-3 py-1 text-sm font-medium text-secondary-foreground">
             Built for the 9-to-5 reality

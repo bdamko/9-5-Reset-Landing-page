@@ -28,13 +28,21 @@ export function Hero() {
         <div className="relative flex justify-center">
           <div className="absolute -inset-6 -z-10 rounded-[3rem] bg-secondary/50 blur-2xl" aria-hidden="true" />
           <PhoneMockup />
-          <div className="absolute -bottom-[170px] -left-[110px] w-[260px] sm:w-[300px] md:-left-[140px]">
+          <div className="absolute -bottom-10 -right-6 w-[180px] sm:-bottom-[170px] sm:-left-[110px] sm:right-auto sm:w-[300px] md:-left-[140px]">
+            <Image
+              src="/normg.png"
+              alt="Friendly giraffe mascot hunched over a laptop"
+              width={200}
+              height={200}
+              className="h-auto w-full drop-shadow-lg sm:hidden"
+              priority
+            />
             <Image
               src="/norm.png"
               alt="Friendly giraffe mascot hunched over a laptop"
               width={200}
               height={200}
-              className="h-auto w-full drop-shadow-lg"
+              className="hidden h-auto w-full drop-shadow-lg sm:block"
               priority
             />
           </div>

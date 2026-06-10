@@ -25,11 +25,18 @@ export function Problem() {
       <div className="mx-auto max-w-6xl px-5">
         <div className="flex flex-col items-center justify-center gap-4 md:flex-row md:gap-8">
           <Image
+            src="/sadg.png"
+            alt="Tired giraffe mascot slumped over a desk"
+            width={160}
+            height={160}
+            className="h-auto w-52 shrink-0 sm:hidden"
+          />
+          <Image
             src="/sad.png"
             alt="Tired giraffe mascot slumped over a desk"
             width={160}
             height={160}
-            className="h-auto w-40 shrink-0 sm:w-52 md:w-60"
+            className="hidden h-auto shrink-0 sm:block sm:w-52 md:w-60"
           />
           <h2 className="text-balance text-center text-3xl font-bold tracking-tight text-foreground md:text-left md:text-4xl">
             Your workday is hurting your body.
