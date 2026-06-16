@@ -29,10 +29,10 @@ export default function PrivacyPage() {
         <p>
           For any privacy questions:{" "}
           <a
-            href="mailto:bukeevadamira1@gmail.com"
+            href="mailto:bukeyeva.damira@gmail.com"
             className="underline hover:opacity-70"
           >
-            bukeevadamira1@gmail.com
+            bukeyeva.damira@gmail.com
           </a>
         </p>
       </section>

@@ -18,6 +18,9 @@ export function SiteNav() {
           <a href="#pricing" className="transition-colors hover:text-foreground">
             Pricing
           </a>
+          <a href="/privacy" className="transition-colors hover:text-foreground">
+            Privacy Policy
+          </a>
         </nav>
         <Button render={<a href="#early-access" />} nativeButton={false} className="rounded-full">
           Join early access
