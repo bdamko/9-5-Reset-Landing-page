@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'Desk recovery that fits in the breaks. Built for the 9-to-5 reality.',
   generator: 'v0.app',
   verification: {
-    google: 'H5HV7BypkZZn9BEbNJvwE7b_Q7VxTPKasz4EM4ZaFa4', 
+    google: 'SU1NrvjUc2Xg1s_RCFvsMxahQHqXMxSc5kQYKPu_wZM', 
   },
   icons: {
     icon: [
