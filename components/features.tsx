@@ -49,20 +49,22 @@ export function Features() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature) => (
-            <div
-              key={feature.title}
-              className="rounded-3xl border border-border bg-card p-6 shadow-sm transition-shadow hover:shadow-md"
-            >
-              <div className="flex size-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                <feature.icon className="size-6" aria-hidden="true" />
+        <div className="mt-12 flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-10">
+          <div className="grid flex-1 gap-5 sm:grid-cols-2">
+            {features.map((feature) => (
+              <div
+                key={feature.title}
+                className="rounded-3xl border border-border bg-card p-6 shadow-sm transition-shadow hover:shadow-md"
+              >
+                <div className="flex size-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                  <feature.icon className="size-6" aria-hidden="true" />
+                </div>
+                <h3 className="mt-4 text-lg font-semibold text-foreground">{feature.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{feature.body}</p>
               </div>
-              <h3 className="mt-4 text-lg font-semibold text-foreground">{feature.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{feature.body}</p>
-            </div>
-          ))}
-          <div className="hidden items-center justify-center lg:flex">
+            ))}
+          </div>
+          <div className="hidden items-center justify-center lg:flex lg:w-64 lg:shrink-0">
             <Image
               src="/happyg.png"
               alt="Happy giraffe mascot celebrating at a desk"
