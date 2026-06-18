@@ -12,8 +12,14 @@ export function FinalCta() {
             <p className="text-pretty text-lg leading-relaxed text-primary-foreground/90">
               Let 9–5 Reset find small ways to help you move, recover, and feel better during the workday.
             </p>
-            <Button render={<a href="#early-access" />} nativeButton={false} size="lg" variant="secondary" className="rounded-full px-8 text-base">
-              Join early access
+            <Button
+              render={<a href="https://chromewebstore.google.com/detail/egmmjbngijkjiabahmaaabbkcknjahcl?utm_source=item-share-cb" target="_blank" rel="noopener noreferrer" />}
+              nativeButton={false}
+              size="lg"
+              variant="secondary"
+              className="rounded-full px-8 text-base"
+            >
+              Download extension
             </Button>
           </div>
         </div>

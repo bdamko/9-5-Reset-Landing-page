@@ -22,8 +22,12 @@ export function SiteNav() {
             Privacy Policy
           </a>
         </nav>
-        <Button render={<a href="#early-access" />} nativeButton={false} className="rounded-full">
-          Join early access
+        <Button
+          render={<a href="https://chromewebstore.google.com/detail/egmmjbngijkjiabahmaaabbkcknjahcl?utm_source=item-share-cb" target="_blank" rel="noopener noreferrer" />}
+          nativeButton={false}
+          className="rounded-full"
+        >
+          Download extension
         </Button>
       </div>
     </header>

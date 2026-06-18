@@ -2,7 +2,6 @@ const plan = [
   { time: "10:40", label: "3-min neck & shoulder stretch", tone: "bg-secondary" },
   { time: "12:30", label: "5-min posture reset", tone: "bg-accent" },
   { time: "15:15", label: "8-min light walk", tone: "bg-secondary" },
-  { time: "18:10", label: "12-min after-work recovery", tone: "bg-accent" },
 ]
 
 export function DemoPlan() {

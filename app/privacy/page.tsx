@@ -18,9 +18,8 @@ export default function PrivacyPage() {
       <section className="mb-8">
         <h2 className="text-xl font-semibold mb-3">Data we collect</h2>
         <p>
-          We collect your email address when you join our waitlist. We collect anonymous usage data
-          (sessions completed, notifications received) to improve the product. We do not collect
-          personal health information.
+          We collect anonymous usage data (sessions completed, notifications received) to improve
+          the product. We do not collect personal health information.
         </p>
       </section>
 

@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { CalendarCheck, Timer, Dumbbell, Battery, Moon } from "lucide-react"
+import { CalendarCheck, Timer, Dumbbell, Battery } from "lucide-react"
 
 const features = [
   {
@@ -21,11 +21,6 @@ const features = [
     icon: Battery,
     title: "One-tap energy check",
     body: "Choose your energy mode in the morning. Your sessions for the day adjust to match your well-being.",
-  },
-  {
-    icon: Moon,
-    title: "Evening wind-down",
-    body: "After 5pm the app shifts to an 8-minute decompression sequence to help you relax after work.",
   },
 ]
 

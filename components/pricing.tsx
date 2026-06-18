@@ -20,10 +20,9 @@ const tiers = [
       "Unlimited daily sessions",
       "Calendar sync with Apple, Google & Outlook",
       "Low/Normal/High Energy modes",
-      "After-work recovery",
       "Weekly progress report",
     ],
-    cta: "Join early access",
+    cta: "Download extension",
     highlighted: true,
   },
 ]
@@ -65,7 +64,13 @@ export function Pricing() {
                 ))}
               </ul>
               <Button
-                render={<a href="#early-access" />}
+                render={
+                  <a
+                    href="https://chromewebstore.google.com/detail/egmmjbngijkjiabahmaaabbkcknjahcl?utm_source=item-share-cb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  />
+                }
                 nativeButton={false}
                 size="lg"
                 variant={tier.highlighted ? "default" : "outline"}

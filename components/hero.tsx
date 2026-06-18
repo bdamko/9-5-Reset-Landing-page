@@ -16,8 +16,13 @@ export function Hero() {
             9–5 Body Reset gives you a desk recovery program for neck and back pain without changing your schedule. 
           </p>
           <div className="flex flex-col items-start gap-3">
-            <Button render={<a href="#early-access" />} nativeButton={false} size="lg" className="rounded-full px-7 text-base">
-              Get your workday reset
+            <Button
+              render={<a href="https://chromewebstore.google.com/detail/egmmjbngijkjiabahmaaabbkcknjahcl?utm_source=item-share-cb" target="_blank" rel="noopener noreferrer" />}
+              nativeButton={false}
+              size="lg"
+              className="rounded-full px-7 text-base"
+            >
+              Download extension
             </Button>
             <p className="text-sm text-muted-foreground">
               Read-only access to Apple, Google & Outlook Calendar
@@ -57,7 +62,6 @@ function PhoneMockup() {
     { time: "10:40", label: "3-min neck & shoulder stretch", tone: "bg-secondary" },
     { time: "12:30", label: "5-min posture reset", tone: "bg-accent" },
     { time: "15:15", label: "8-min light walk", tone: "bg-secondary" },
-    { time: "18:10", label: "12-min after-work recovery", tone: "bg-accent" },
   ]
   return (
     <div className="w-[260px] rounded-[2.5rem] border-8 border-foreground/90 bg-card p-4 shadow-2xl sm:w-[280px]">
