@@ -35,8 +35,13 @@ async function upsertSubscriber(row: {
 // live, send one real test event from the Polar dashboard and confirm
 // `data.customer.email` (or whichever fallback fires) actually has the
 // buyer's email.
+// Normalized to lowercase: `email` is the subscribers table's primary key,
+// and Polar passes through whatever case the customer typed at checkout —
+// without this, the same person paying with "User@x.com" one month and
+// "user@x.com" the next would create two separate rows for the same email.
 function getEmail(data: any): string | undefined {
-  return data?.customer?.email ?? data?.customer_email
+  const email = data?.customer?.email ?? data?.customer_email
+  return email?.toLowerCase().trim()
 }
 
 function getCustomerId(data: any): string | undefined {
