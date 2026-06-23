@@ -25,9 +25,9 @@ function withEmail(url: string, email?: string) {
 export default async function UpgradePage({
   searchParams,
 }: {
-  searchParams: Promise<{ email?: string }>
+  searchParams: Promise<{ email?: string; success?: string }>
 }) {
-  const { email } = await searchParams
+  const { email, success } = await searchParams
 
   const tiers = [
     {
@@ -57,6 +57,17 @@ export default async function UpgradePage({
         <p className="mt-3 text-center text-lg text-muted-foreground">
           Calendar sync and every reset window for the day, unblurred.
         </p>
+
+        {success ? (
+          <div className="mx-auto mt-6 max-w-md rounded-2xl border border-emerald-500/30 bg-emerald-500/10 px-5 py-4 text-center">
+            <p className="font-medium text-emerald-600 dark:text-emerald-400">
+              Payment received — you&rsquo;re Pro now! 🎉
+            </p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              You may return to the extension to start using it.
+            </p>
+          </div>
+        ) : null}
 
         {email ? (
           <p className="mt-2 text-center text-sm text-muted-foreground">
