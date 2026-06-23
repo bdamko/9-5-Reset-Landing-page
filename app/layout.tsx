@@ -10,9 +10,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: '9–5 Reset — Health that fits between meetings',
+  title: '9–5 Reset — Movement breaks that fit between meetings',
   description:
-    'Desk recovery that fits in the breaks. Built for the 9-to-5 reality.',
+    'Movement breaks that fit in the gaps. Built for the 9-to-5 reality.',
   generator: 'v0.app',
   verification: {
     google: 'SU1NrvjUc2Xg1s_RCFvsMxahQHqXMxSc5kQYKPu_wZM',

@@ -4,8 +4,8 @@ import { CalendarCheck, Timer, Dumbbell, Battery } from "lucide-react"
 const features = [
   {
     icon: Timer,
-    title: "Neck & back recovery program",
-    body: "A structured recovery plan that progresses week by week, helping you build strength and mobility instead of repeating random exercises.",
+    title: "Neck & back movement plan",
+    body: "A structured break plan that progresses week by week, helping you build strength and mobility instead of repeating random exercises.",
   },
   {
     icon: CalendarCheck,
@@ -14,13 +14,13 @@ const features = [
   },
   {
     icon: Dumbbell,
-    title: "Built for your specific pain",
-    body: "Neck-focused, back-focused, or both. Your program adjusts accordingly. ",
+    title: "Built for your focus area",
+    body: "Neck-focused, back-focused, or both. Your sessions adjust accordingly. ",
   },
   {
     icon: Battery,
     title: "One-tap energy check",
-    body: "Choose your energy mode in the morning. Your sessions for the day adjust to match your well-being.",
+    body: "Choose your energy mode in the morning. Your sessions for the day adjust to match your energy level.",
   },
 ]
 
@@ -45,7 +45,7 @@ export function Features() {
             Tiny resets that work around your real workday
           </h2>
           <p className="mt-3 text-pretty text-lg leading-relaxed text-muted-foreground">
-            No gym, no long workouts. 9–5 Reset slips small healthy moments into the gaps you already have.
+            No gym, no long workouts. 9–5 Reset slips small movement moments into the gaps you already have.
           </p>
         </div>
 

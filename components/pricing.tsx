@@ -6,7 +6,7 @@ const tiers = [
     name: "Free",
     price: "$0",
     period: "forever",
-    features: ["Manual schedule", "3 sessions per week", "Week 1 of the neck & back program"],
+    features: ["Manual schedule", "3 sessions per week", "Week 1 of the neck & back movement plan"],
     cta: "Start free",
     highlighted: false,
   },
@@ -16,7 +16,7 @@ const tiers = [
     period: "/month",
     badge: "Early price",
     features: [
-      "Weekly recovery program",
+      "Weekly movement plan",
       "Unlimited daily sessions",
       "Calendar sync with Apple, Google & Outlook",
       "Low/Normal/High Energy modes",
@@ -34,7 +34,7 @@ export function Pricing() {
         <h2 className="text-balance text-center text-3xl font-bold tracking-tight text-foreground md:text-4xl">
           Simple pricing
         </h2>
-        <p className="mt-3 text-center text-lg text-muted-foreground">Start with a 1-week neck & back reset. Then keep going — maintenance programs, new focus areas, and calendar sync keep working every day.</p>
+        <p className="mt-3 text-center text-lg text-muted-foreground">Start with a 1-week neck & back reset. Then keep going — new routines, new focus areas, and calendar sync keep working every day.</p>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {tiers.map((tier) => (
             <div

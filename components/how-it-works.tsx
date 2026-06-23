@@ -4,8 +4,8 @@ const steps = [
   {
     icon: Search,
     step: "1",
-    title: "Share your problem area",
-    body: "Neck pain, back pain, or both. Your 4-week recovery program is built around your specific issue.",
+    title: "Pick your focus area",
+    body: "Neck, back, or both. Your 4-week movement plan is built around your focus area.",
   },
   {
     icon: CalendarPlus,

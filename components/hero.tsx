@@ -7,13 +7,13 @@ export function Hero() {
       <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 md:grid-cols-2 md:py-20">
         <div className="flex flex-col items-start gap-6">
           <span className="inline-flex items-center gap-2 rounded-full bg-secondary px-3 py-1 text-sm font-medium text-secondary-foreground">
-            Let 9-5 Reset take care of your health
+            Let 9-5 Reset build the habit for you
           </span>
           <h1 className="text-balance text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl">
-            Health that fits between meetings.
+            Movement breaks that fit between meetings.
           </h1>
           <p className="text-pretty text-lg leading-relaxed text-muted-foreground">
-            9–5 Body Reset gives you a desk recovery program for neck and back pain without changing your schedule. 
+            9–5 Reset slips short movement breaks for your neck and back into the day without changing your schedule.
           </p>
           <div className="flex flex-col items-start gap-3">
             <Button

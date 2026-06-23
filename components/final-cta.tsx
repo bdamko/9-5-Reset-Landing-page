@@ -10,7 +10,7 @@ export function FinalCta() {
               Your body was not made for back-to-back meetings.
             </h2>
             <p className="text-pretty text-lg leading-relaxed text-primary-foreground/90">
-              Let 9–5 Reset find small ways to help you move, recover, and feel better during the workday.
+              Let 9–5 Reset find small ways to help you move and feel better during the workday.
             </p>
             <Button
               render={<a href="https://chromewebstore.google.com/detail/egmmjbngijkjiabahmaaabbkcknjahcl?utm_source=item-share-cb" target="_blank" rel="noopener noreferrer" />}
@@ -36,7 +36,7 @@ export function SiteFooter() {
           <span aria-hidden="true">🦒</span>
           <span className="font-semibold text-foreground">9–5 Reset</span>
         </div>
-        <p>Desk recovery that fits in the gaps. Built for the 9-to-5 reality.</p>
+        <p>Movement breaks that fit in the gaps. Built for the 9-to-5 reality.</p>
       </div>
     </footer>
   )
