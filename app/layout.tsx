@@ -15,7 +15,22 @@ export const metadata: Metadata = {
     'Desk recovery that fits in the breaks. Built for the 9-to-5 reality.',
   generator: 'v0.app',
   verification: {
-    google: 'SU1NrvjUc2Xg1s_RCFvsMxahQHqXMxSc5kQYKPu_wZM', 
+    google: 'SU1NrvjUc2Xg1s_RCFvsMxahQHqXMxSc5kQYKPu_wZM',
+  },
+  openGraph: {
+    title: '9-5 Reset — Movement breaks that fit your calendar',
+    description:
+      'A Chrome extension that finds the gaps between your meetings and reminds you to move.',
+    url: 'https://www.9to5reset.app',
+    type: 'website',
+    images: ['https://www.9to5reset.app/norm.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '9-5 Reset — Movement breaks that fit your calendar',
+    description:
+      'A Chrome extension that finds the gaps between your meetings and reminds you to move.',
+    images: ['https://www.9to5reset.app/norm.png'],
   },
   icons: {
     icon: [
