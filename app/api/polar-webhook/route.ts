@@ -45,7 +45,7 @@ function getEmail(data: any): string | undefined {
 }
 
 function getCustomerId(data: any): string | undefined {
-  return data?.customer_id ?? data?.customer?.id
+  return data?.customerId ?? data?.customer_id ?? data?.customer?.id
 }
 
 export const POST = Webhooks({
@@ -55,9 +55,13 @@ export const POST = Webhooks({
   // order.paid also fires for a subscription's first invoice; skip those
   // here since onSubscriptionActive already grants Pro for the monthly plan,
   // and we don't want to mislabel a monthly subscriber's plan as "lifetime".
+  // The SDK's Order schema remaps the wire field subscription_id -> the
+  // camelCase subscriptionId before this handler runs (see node_modules/
+  // @polar-sh/sdk's Order$inboundSchema) — checking the snake_case name
+  // here always read undefined, so this guard never actually skipped.
   onOrderPaid: async (payload) => {
     const data: any = payload.data
-    if (data?.subscription_id) return
+    if (data?.subscriptionId ?? data?.subscription_id) return
 
     const email = getEmail(data)
     if (!email) return
