@@ -12,7 +12,7 @@ const tiers = [
   },
   {
     name: "Pro",
-    price: "$4.99",
+    price: "$5.99",
     period: "/month",
     badge: "Early price",
     features: [
