@@ -32,7 +32,7 @@ export function Hero() {
 
         <div className="relative flex justify-center">
           <div className="absolute -inset-6 -z-10 rounded-[3rem] bg-secondary/50 blur-2xl" aria-hidden="true" />
-          <PhoneMockup />
+          <DesktopMockup />
           <div className="absolute -bottom-10 -right-6 w-[180px] sm:-bottom-[170px] sm:-left-[110px] sm:right-auto sm:w-[300px] md:-left-[140px]">
             <Image
               src="/normg.png"
@@ -57,25 +57,22 @@ export function Hero() {
   )
 }
 
-function PhoneMockup() {
-  const items = [
-    { time: "10:40", label: "3-min neck & shoulder stretch", tone: "bg-secondary" },
-    { time: "12:30", label: "5-min posture reset", tone: "bg-accent" },
-    { time: "15:15", label: "8-min light walk", tone: "bg-secondary" },
-  ]
+function DesktopMockup() {
   return (
-    <div className="w-[260px] rounded-[2.5rem] border-8 border-foreground/90 bg-card p-4 shadow-2xl sm:w-[280px]">
-      <div className="mx-auto mb-4 h-1.5 w-16 rounded-full bg-foreground/20" />
-      <p className="px-1 text-xs font-medium uppercase tracking-wide text-muted-foreground">Today&apos;s reset</p>
-      <p className="mb-4 px-1 text-lg font-semibold text-foreground">Tuesday plan</p>
-      <ul className="flex flex-col gap-2.5">
-        {items.map((item) => (
-          <li key={item.time} className={`flex items-center gap-3 rounded-2xl ${item.tone} px-3 py-2.5`}>
-            <span className="text-xs font-bold text-secondary-foreground">{item.time}</span>
-            <span className="text-sm font-medium leading-tight text-secondary-foreground">{item.label}</span>
-          </li>
-        ))}
-      </ul>
+    <div className="w-[260px] overflow-hidden rounded-2xl border-8 border-foreground/90 bg-card shadow-2xl sm:w-[300px]">
+      <div className="flex items-center gap-1.5 border-b border-foreground/10 bg-foreground/5 px-3 py-2">
+        <span className="h-2.5 w-2.5 rounded-full bg-destructive/70" />
+        <span className="h-2.5 w-2.5 rounded-full bg-accent/70" />
+        <span className="h-2.5 w-2.5 rounded-full bg-secondary" />
+      </div>
+      <Image
+        src="/extension-screenshot.png"
+        alt="9-5 Reset extension popup open in the browser, showing the next reset countdown and upcoming sessions"
+        width={519}
+        height={916}
+        className="h-auto w-full"
+        priority
+      />
     </div>
   )
 }
