@@ -33,7 +33,7 @@ export function Hero() {
         <div className="relative flex justify-center">
           <div className="absolute -inset-6 -z-10 rounded-[3rem] bg-secondary/50 blur-2xl" aria-hidden="true" />
           <DesktopMockup />
-          <div className="absolute -bottom-10 -right-6 w-[180px] sm:-bottom-[170px] sm:-left-[110px] sm:right-auto sm:w-[300px] md:-left-[140px]">
+          <div className="absolute -bottom-16 -right-4 w-[140px] sm:-bottom-20 sm:-left-16 sm:right-auto sm:w-[200px]">
             <Image
               src="/normg.png"
               alt="Friendly giraffe mascot hunched over a laptop"
@@ -59,19 +59,19 @@ export function Hero() {
 
 function DesktopMockup() {
   return (
-    <div className="w-[260px] overflow-hidden rounded-2xl border-8 border-foreground/90 bg-card shadow-2xl sm:w-[300px]">
+    <div className="w-full max-w-[460px] overflow-hidden rounded-2xl border-8 border-foreground/90 bg-card shadow-2xl sm:max-w-[560px]">
       <div className="flex items-center gap-1.5 border-b border-foreground/10 bg-foreground/5 px-3 py-2">
         <span className="h-2.5 w-2.5 rounded-full bg-destructive/70" />
         <span className="h-2.5 w-2.5 rounded-full bg-accent/70" />
         <span className="h-2.5 w-2.5 rounded-full bg-secondary" />
       </div>
-      <Image
-        src="/extension-screenshot.png"
-        alt="9-5 Reset extension popup open in the browser, showing the next reset countdown and upcoming sessions"
-        width={519}
-        height={916}
-        className="h-auto w-full"
-        priority
+      <video
+        src="/extension-demo.mp4"
+        className="block h-auto w-full"
+        autoPlay
+        loop
+        muted
+        playsInline
       />
     </div>
   )
