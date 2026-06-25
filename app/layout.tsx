@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: '9-5 Reset — Movement breaks that fit your calendar',
     description:
       'A Chrome extension that finds the gaps between your meetings and reminds you to move.',
-    images: ['https://www.9to5reset.app/norm.png'],
+    images: ['https://www.9to5reset.app/x-preview.png'],
   },
   icons: {
     icon: [
