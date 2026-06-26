@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       'A Chrome extension that finds the gaps between your meetings and reminds you to move.',
     url: 'https://www.9to5reset.app',
     type: 'website',
-    images: ['https://www.9to5reset.app/norm.png'],
+    images: ['https://www.9to5reset.app/x-preview.png'],
   },
   twitter: {
     card: 'summary_large_image',
