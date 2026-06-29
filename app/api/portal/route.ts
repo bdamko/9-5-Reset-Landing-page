@@ -1,33 +1,59 @@
-import { CustomerPortal } from "@polar-sh/nextjs"
+import { Polar } from "@polar-sh/sdk"
 import type { NextRequest } from "next/server"
+import { NextResponse } from "next/server"
 
-// Resolves ?email= (set by the extension's "Manage subscription" button) to
-// the Polar customer ID stored on their subscribers row, then redirects into
-// Polar's hosted Customer Portal — where a monthly subscriber can cancel.
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL!
 const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY!
+const POLAR_ACCESS_TOKEN = process.env.POLAR_ACCESS_TOKEN!
 
-async function getCustomerId(req: NextRequest): Promise<string> {
-  const email = req.nextUrl.searchParams.get("email")?.toLowerCase().trim()
-  if (!email) throw new Error("missing_email")
+export async function GET(req: NextRequest) {
+  try {
+    const email = req.nextUrl.searchParams.get("email")?.toLowerCase().trim()
+    if (!email) {
+      return NextResponse.json({ error: "missing_email" }, { status: 400 })
+    }
 
-  const params = new URLSearchParams({ select: "polar_customer_id", email: `eq.${email}` })
-  const response = await fetch(`${SUPABASE_URL}/rest/v1/subscribers?${params.toString()}`, {
-    headers: {
-      apikey: SUPABASE_SERVICE_ROLE_KEY,
-      Authorization: `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
-    },
-  })
-  if (!response.ok) throw new Error(`subscribers lookup failed (${response.status})`)
+    if (!SUPABASE_SERVICE_ROLE_KEY) {
+      return NextResponse.json({ error: "SUPABASE_SERVICE_ROLE_KEY not configured" }, { status: 500 })
+    }
+    if (!POLAR_ACCESS_TOKEN) {
+      return NextResponse.json({ error: "POLAR_ACCESS_TOKEN not configured" }, { status: 500 })
+    }
 
-  const rows = await response.json()
-  const customerId = rows[0]?.polar_customer_id
-  if (!customerId) throw new Error("no_polar_customer_for_email")
-  return customerId
+    // Look up polar_customer_id in Supabase
+    const params = new URLSearchParams({ select: "polar_customer_id", email: `eq.${email}` })
+    const supabaseRes = await fetch(`${SUPABASE_URL}/rest/v1/subscribers?${params.toString()}`, {
+      headers: {
+        apikey: SUPABASE_SERVICE_ROLE_KEY,
+        Authorization: `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
+      },
+    })
+
+    if (!supabaseRes.ok) {
+      const detail = await supabaseRes.text()
+      console.error("[/api/portal] supabase error:", supabaseRes.status, detail)
+      return NextResponse.json(
+        { error: "supabase_lookup_failed", status: supabaseRes.status, detail },
+        { status: 500 }
+      )
+    }
+
+    const rows = await supabaseRes.json()
+    const customerId = rows[0]?.polar_customer_id
+
+    if (!customerId) {
+      return NextResponse.json({ error: "no_polar_customer_for_email", email }, { status: 404 })
+    }
+
+    // Create Polar customer portal session
+    const polar = new Polar({ accessToken: POLAR_ACCESS_TOKEN, server: "production" })
+
+    const { customerPortalUrl } = await polar.customerSessions.create({ customerId })
+
+    return NextResponse.redirect(customerPortalUrl)
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : String(err)
+    console.error("[/api/portal] unexpected error:", message)
+    return NextResponse.json({ error: message }, { status: 500 })
+  }
 }
-
-export const GET = CustomerPortal({
-  accessToken: process.env.POLAR_ACCESS_TOKEN!,
-  server: "production",
-  getCustomerId,
-})

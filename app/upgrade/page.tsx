@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button"
 // "monthly" (recurring) product in the Polar dashboard, then paste their
 // checkout links here (or set the env vars below).
 const LIFETIME_CHECKOUT_URL =
-  process.env.NEXT_PUBLIC_POLAR_LIFETIME_CHECKOUT_URL || "https://buy.polar.sh/polar_cl_vGqsGamb630k9ioAaTDoXMelybzjbducLgzVy4auSoI"
+  process.env.NEXT_PUBLIC_POLAR_LIFETIME_CHECKOUT_URL || "https://buy.polar.sh/polar_cl_60vsmQfiAzgs5EdJgh1k2KBiVpSBcUMCMNk0l3fhyyE"
 const MONTHLY_CHECKOUT_URL =
-  process.env.NEXT_PUBLIC_POLAR_MONTHLY_CHECKOUT_URL || "https://buy.polar.sh/polar_cl_wyoRh5FPyIxM5R4wWm1blhomvTm64i6KUlXQj3KE4Cq"
+  process.env.NEXT_PUBLIC_POLAR_MONTHLY_CHECKOUT_URL || "https://buy.polar.sh/polar_cl_XiXRNkZNwH8EgEMEdyIMyBgJmj5L2KjTRKCAe0IV4kA"
 
 // Polar Checkout Links support pre-filling the customer email via
 // ?customer_email= so the email used to sign in inside the extension is the
