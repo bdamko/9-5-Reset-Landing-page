@@ -46,7 +46,8 @@ export async function GET(req: NextRequest) {
     }
 
     // Create Polar customer portal session
-    const polar = new Polar({ accessToken: POLAR_ACCESS_TOKEN, server: "production" })
+    const server = (process.env.POLAR_SERVER ?? "production") as "production" | "sandbox"
+    const polar = new Polar({ accessToken: POLAR_ACCESS_TOKEN, server })
 
     const { customerPortalUrl } = await polar.customerSessions.create({ customerId })
 
