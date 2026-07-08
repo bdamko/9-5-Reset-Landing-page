@@ -1,6 +1,14 @@
 import { Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
+const proFeatures = [
+  "Weekly movement plan",
+  "Unlimited daily sessions",
+  "Calendar sync with Apple, Google & Outlook",
+  "Low/Normal/High Energy modes",
+  "Weekly progress report",
+]
+
 const tiers = [
   {
     name: "Free",
@@ -11,31 +19,34 @@ const tiers = [
     highlighted: false,
   },
   {
+    name: "Lifetime",
+    price: "$12",
+    period: "one-time",
+    badge: "Best value",
+    features: ["Pay once, Pro forever", ...proFeatures],
+    cta: "Get lifetime access",
+    highlighted: true,
+  },
+  {
     name: "Pro",
     price: "$5.99",
     period: "/month",
     badge: "Early price",
-    features: [
-      "Weekly movement plan",
-      "Unlimited daily sessions",
-      "Calendar sync with Apple, Google & Outlook",
-      "Low/Normal/High Energy modes",
-      "Weekly progress report",
-    ],
-    cta: "Download extension",
-    highlighted: true,
+    features: proFeatures,
+    cta: "Subscribe monthly",
+    highlighted: false,
   },
 ]
 
 export function Pricing() {
   return (
     <section id="pricing" className="py-16 md:py-24">
-      <div className="mx-auto max-w-4xl px-5">
+      <div className="mx-auto max-w-5xl px-5">
         <h2 className="text-balance text-center text-3xl font-bold tracking-tight text-foreground md:text-4xl">
           Simple pricing
         </h2>
         <p className="mt-3 text-center text-lg text-muted-foreground">Start with a 1-week neck & back reset. Then keep going — new routines, new focus areas, and calendar sync keep working every day.</p>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
           {tiers.map((tier) => (
             <div
               key={tier.name}
