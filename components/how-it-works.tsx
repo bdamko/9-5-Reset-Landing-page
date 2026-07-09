@@ -1,44 +1,47 @@
-import { CalendarPlus, Search, Sparkles } from "lucide-react"
-
 const steps = [
   {
-    icon: Search,
-    step: "1",
-    title: "Pick your focus area",
-    body: "Neck, back, or both. Your 4-week movement plan is built around your focus area.",
+    n: "1",
+    tint: "bg-primary/15 text-primary",
+    title: "Connect your calendar",
+    body: "Read-only Google Calendar access. We only look at when you’re busy — never the details.",
   },
   {
-    icon: CalendarPlus,
-    step: "2",
-    title: "Set your schedule (or sync your calendar)",
-    body: "Enter your work hours manually — free. Connect your calendar on Pro for automatic gap detection.",
+    n: "2",
+    tint: "bg-accent/15 text-[#9c5f2e]",
+    title: "We find the real gaps",
+    body: "The extension spots the open minutes between meetings and quietly schedules resets there.",
   },
   {
-    icon: Sparkles,
-    step: "3",
-    title: "Get your daily resets",
-    body: "Short targeted sessions for 3 to 12 minutes. Built for desk workers, not athletes.",
+    n: "3",
+    tint: "bg-primary/15 text-primary",
+    title: "Reset in two minutes",
+    body: "A gentle nudge, a “get ready” beat, then a personalized stretch matched to how you feel.",
   },
 ]
 
 export function HowItWorks() {
   return (
-    <section id="how" className="bg-muted/40 py-16 md:py-24">
-      <div className="mx-auto max-w-6xl px-5">
-        <h2 className="text-balance text-center text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+    <section id="how" className="bg-secondary px-5 py-18 md:px-8 md:py-20">
+      <div className="mx-auto max-w-6xl">
+        <span className="text-[13px] font-bold uppercase tracking-[0.1em] text-muted-foreground/80">
           How it works
+        </span>
+        <h2 className="mb-11 mt-2.5 font-heading text-4xl font-semibold tracking-tight text-foreground">
+          Three steps, then it runs itself.
         </h2>
-        <div className="mt-12 grid gap-8 sm:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-3">
           {steps.map((step) => (
-            <div key={step.step} className="relative rounded-3xl border border-border bg-card p-6 pt-8 text-center shadow-sm">
-              <span className="absolute -top-4 left-1/2 flex size-8 -translate-x-1/2 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
-                {step.step}
-              </span>
-              <div className="mx-auto flex size-12 items-center justify-center rounded-2xl bg-secondary text-secondary-foreground">
-                <step.icon className="size-6" aria-hidden="true" />
+            <div
+              key={step.n}
+              className="rounded-[20px] border border-border bg-card p-7 shadow-[0_20px_40px_-34px_rgba(51,48,43,0.4)]"
+            >
+              <div
+                className={`flex size-10 items-center justify-center rounded-xl text-lg font-bold ${step.tint}`}
+              >
+                {step.n}
               </div>
-              <h3 className="mt-4 text-lg font-semibold text-foreground">{step.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.body}</p>
+              <h3 className="mb-2 mt-5 text-[19px] font-semibold text-foreground">{step.title}</h3>
+              <p className="text-[15px] leading-relaxed text-muted-foreground">{step.body}</p>
             </div>
           ))}
         </div>

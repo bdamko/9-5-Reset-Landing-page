@@ -13,9 +13,9 @@ export default function Page() {
       <SiteNav />
       <Hero />
       <Problem />
-      <Features />
       <HowItWorks />
       <DemoPlan />
+      <Features />
       <Pricing />
       <FinalCta />
       <SiteFooter />
